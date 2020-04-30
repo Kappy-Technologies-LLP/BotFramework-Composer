@@ -24,7 +24,9 @@
     "lint": "eslint --quiet --ext .ts,.tsx ./src ./__tests__",
     "lint:fix": "yarn lint --fix",
     "lint:typecheck": "tsc --noEmit",
-    "watch": "yarn build:ts --watch"
+    "watch": "yarn build:ts --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@bfc/code-editor": "*",
@@ -40,7 +42,8 @@
     "lodash": "^4.17.15",
     "nanoid": "^2.0.1",
     "office-ui-fabric-react": "7.62.0",
-    "react-error-boundary": "^1.2.5"
+    "react-error-boundary": "^1.2.5",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "react": "16.9.0",
@@ -90,5 +93,6 @@
   "repository": "",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "snyk": true
 }
