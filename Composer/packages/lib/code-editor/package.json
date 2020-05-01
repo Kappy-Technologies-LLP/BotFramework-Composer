@@ -21,7 +21,9 @@
     "lint": "eslint --quiet --ext .ts,.tsx ./src",
     "lint:fix": "yarn lint --fix",
     "lint:typecheck": "tsc --noEmit",
-    "watch": "yarn build:ts --watch"
+    "watch": "yarn build:ts --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "peerDependencies": {
     "react": "16.9.0",
@@ -70,6 +72,8 @@
     "monaco-languageclient": "^0.10.0",
     "normalize-url": "^4.5.0",
     "reconnecting-websocket": "^3.2.2",
-    "vscode-ws-jsonrpc": "^0.1.1"
-  }
+    "vscode-ws-jsonrpc": "^0.1.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
