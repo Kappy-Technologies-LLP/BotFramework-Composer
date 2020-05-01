@@ -19,7 +19,9 @@
     "lint": "eslint --quiet --ext .ts,.tsx ./src",
     "lint:fix": "yarn lint --fix",
     "lint:typecheck": "tsc --noEmit",
-    "watch": "yarn build:ts --watch"
+    "watch": "yarn build:ts --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.146",
@@ -32,6 +34,8 @@
     "@bfcomposer/bf-lu": "^1.1.8",
     "botbuilder-lg": "4.7.0-preview.93464",
     "botframework-expressions": "4.7.0-preview.93464",
-    "lodash": "^4.17.15"
-  }
+    "lodash": "^4.17.15",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
