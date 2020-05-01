@@ -21,7 +21,9 @@
     "start": "webpack-dev-server --config demo/webpack.config.demo.js --port 3002",
     "test": "jest --no-cache",
     "lint": "eslint --quiet --ext .ts,.tsx ./src ./__tests__",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@bfc/shared": "*",
@@ -36,7 +38,8 @@
     "lodash": "^4.17.15",
     "office-ui-fabric-react": "7.62.0",
     "prop-types": "^15.7.2",
-    "source-map-loader": "^0.2.4"
+    "source-map-loader": "^0.2.4",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -66,5 +69,6 @@
   "repository": "",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "snyk": true
 }
